@@ -1,0 +1,201 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+	<title>
+		Film Survey
+	</title>
+
+
+<style>
+
+body {
+
+	color: #eff3f7;
+}
+
+#outer{
+
+	background-color: #ea504e;
+	width: 500px;
+	padding: 10px;
+	margin: auto;
+	border-radius: 12px;
+	margin-top: 12px;
+
+}
+
+#outer hr {
+
+	width: 60%; 
+}
+.label {
+
+width: 200px;
+float: left;
+text-align: right;
+margin-right: 10px;
+padding-right:10px;
+
+}
+
+textarea {
+
+	max-width: 200px;
+}
+
+.small{width: 35px;}
+
+.medium {width: 160px;}
+
+.large {width: 600px}
+
+.button {
+
+	background-color: #147fd7;
+	color: #eff3f7;
+	border-radius: 8px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.button:hover {
+
+	background-color: #eff3f7;
+	color: #147fd7;
+}
+
+
+h1 {
+
+	text-align: center;
+
+}
+
+.why {
+
+	margin-left: 100px;
+
+}
+
+
+#radio {
+
+	float: left;
+}
+</style>
+
+</head>
+<body>
+
+<div id="outer">	
+<img src="bernie.png"
+style="
+
+	width: 400px;
+	height: 240px;
+	margin-bottom: 20px;
+	margin-left: 50px;
+">
+<br/>
+<br/>
+
+<form action="http://www.usc.edu/cgi-bin/mail_form/dsheetz@usc.edu">
+
+<div class="label"> Name:</div>
+<input 
+type="text"
+name="fullname"
+/>
+		
+		<br/>
+
+<br/>
+<div class="label"> Age:</div>
+<input type="text" class="small" name="Age"
+		maxlength="2"/>
+
+		<br/>
+
+
+<br/>
+<div class="label"> Email:</div>
+<input type="text" name="Email"/><br/>
+
+
+<br/>
+<br/>
+
+<div class="label"> Do you <span style="color: black;">yearn</span> for <span style="color: black;">Bern</span>? </div>
+<input type="checkbox" name="likesfilm"/>Yes
+<input type="checkbox" name="likesfilm"/>No
+
+		<br/>
+		<br/>
+
+<br/>
+<div class= "label"> <span style="color: black;">Quick Question:</span> Bernie? </div>
+
+<div id="radio">
+<input type="radio" name="why"
+		value="dumb"/> Bernie!
+		<br/>
+<input type="radio" name="why"
+		value="verydumb"/> Bernie!
+		<br/>
+<input type="radio" name="why"
+		value="dumbest"/> Bernie!
+		
+</div> <!--close radio-->
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+
+<div class="label"> Write "Bernie" Eleven Times</div>
+<textarea name="filmstory" class="large"></textarea>
+
+		<br/>
+		<br/>
+		<br/>
+
+
+
+<div class ="label"> Favorite Thing About Bernie</div>
+	<select>
+		<option>Pick One</option>
+		<option>------</option>
+		<option>His Hair</option>
+		<option>His Nose</option>
+		<option>His Eyes</option>
+		<option>His Charm</option>
+		<option>His Style</option>
+	</select> 
+
+		<br/>
+		<br/>
+		<br/>
+
+
+	<input class="button" type="submit"
+		value= "Submit Form"/>
+
+	<input class="button" style="float: right;" type="reset"
+		value="Start Over"/>
+
+
+
+
+
+
+
+
+</form>
+</div> <!--close outer-->
+
+</body>
+<html>

@@ -1,0 +1,149 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+	<title>
+		Film Survey
+	</title>
+
+
+<style>
+#outer{
+
+	background-color: lightsteelblue;
+	width: 900px;
+	margin: auto;
+	border-radius: 12px;
+
+}
+
+.label {
+
+width: 200px;
+float: left;
+text-align: right;
+padding-right:10px;
+
+
+}
+
+.small{width: 35px;}
+
+.medium {width: 160px;}
+
+.large {width: 600px}
+
+.button {
+
+	background-color: blue;
+	color: white;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+.button:hover {
+
+	background-color: steelblue;
+	color: yellow;
+}
+
+h1 {
+
+	text-align: center;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<div id="outer">	
+<h1> Film Survey</h1>
+
+<form action="http://www.usc.edu/cgi-bin/mail_form/dsheetz@usc.edu">
+
+<div class="label"> Name:</div>
+<input 
+type="text"
+name="fullname"
+/>
+		
+		<br/>
+
+
+<div class="label"> Age:</div>
+<input type="text" class="small" name="Age"
+		maxlength="2"/>
+
+		<br/>
+
+
+<div class="label"> Email:</div>
+<input type="text" name="Email"
+		value="@usc.edu"/><br/>
+
+		<br/>
+		<br/>
+
+
+<div class="label"> Like Movies? </div>
+<input type="checkbox" name="likesfilm"/>Yes
+
+		<br/>
+
+
+<div class= "label"> Fav Genre? </div>
+<input type="radio" name="favgenre"
+		value="action"/>Action
+<input type="radio" name="favgenre"
+		value="comedy"/>Comedy
+<input type="radio" name="favgenre"
+		value="sci-fi"/>Sci-Fi
+		
+		<br/>
+		<br/>
+
+
+<div class="label"> Film Story</div>
+<textarea name="filmstory" class="large"></textarea>
+
+		<br/>
+		<br/>
+
+
+<div class ="label"> Fav Actor</div>
+	<select>
+		<option>Pick One</option>
+		<option>------</option>
+		<option>Dicaprio</option>
+		<option>Hardy</option>
+		<option>Redmayne</option>
+		<option>Damon</option>
+		<option>Hill</option>
+	</select> 
+
+		<br/>
+		<br/>
+
+	<input class="button" type="submit"
+		value= "Submit Form"/>
+
+	<input class="button" type="reset"
+		value="Start Over"/>
+
+
+
+
+
+
+
+
+</form>
+</div> <!--close outer-->
+
+</body>
+<html>
