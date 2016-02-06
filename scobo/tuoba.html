@@ -1,0 +1,506 @@
+<html>
+
+<head>
+
+<title>
+	Scobo Custom Engraving
+</title>
+
+<style>
+
+
+body {
+
+	background-image: url(lacol.jpg), url(grad.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 400px, 100% 100%;
+	padding: 20px;
+	margin: -8px;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+#outer{
+
+	width: 800px;
+	height: 1200px;
+	margin: auto;
+
+}
+
+
+#header {
+
+	width: 800px;
+	height: 400px;
+	margin: -20px;
+	padding: 20px;
+
+}
+
+#header h1 {
+
+	font-size: 70pt;
+	font-family: futura;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 40px;
+	letter-spacing: 5px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+}
+
+#header h3 {
+
+	font-size: 25pt;
+	font-family: futura;
+	text-align: center;
+	margin-top: 0px;
+	color: #f2f2f2;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+
+}
+
+.nav:hover {
+	
+	background-image: url(greywood.jpg);
+}
+
+.nav {
+
+	width: 100px;
+	height: 30px;
+	border: 1px solid black;
+	padding-left: 2px;
+	margin: 5px;
+	font-family: futura;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 11px;
+	background-image: url(grey2.jpg);
+	background-size: 100% 100%;
+	background-repeat: 0;
+	color: white;
+	box-shadow: 0 0 3px black;
+	display: block;
+
+}
+
+.dropbtn {
+    background-image: url(grey2.jpg);
+    color: white;
+    padding: 11px;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+   	font-family: futura;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 0 0 3px black;
+    width: 100px;
+    height: 43px;
+    float: left;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-image: url(greywood.jpg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-image: url(grey2.jpg);
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+    width: 100px;
+    height: 140px;
+    margin-top: 50px;
+    margin-left: 35px;
+
+   }
+
+   .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: futura;
+	text-align: left;
+	color: white;
+
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+
+.circlebox {
+
+	width: 350px;
+	height: 650px;
+	text-align: center;
+	float: left;
+	margin-top: 30px;
+
+}
+
+.circlebox h1 {
+
+	font-size: 30pt;
+	font-family: futura;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	color: black;
+
+}
+
+.circlebox h3 {
+
+	font-size: 14pt;
+	font-family: futura;
+	text-align: center;
+	color: black;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+}
+
+ .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border-radius: 100px;
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 20px;
+    border:2px solid black;
+    box-shadow: 0 0 3px black;
+    margin-bottom: 0px;
+
+}
+
+
+#boxes {
+
+	width: 1050px;
+	height: 350px;
+	margin-left: -100px;
+	margin-top: 50px;
+
+
+}
+
+.desc {
+
+	width: 300px;
+	height: 315px;
+	margin-left: 15px;
+	margin-top: 25px;
+	float: left;
+	font-size: 14pt;
+	padding: 10px;
+	text-align: left;
+
+
+}
+
+.qs {
+
+	width: 50px;
+	height: 140px;
+	border-bottom: 1px solid black;
+	float: right;
+	font-size: 10pt;
+	text-align: left;
+	padding-left: 10px;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	margin-left: 8px;
+
+}
+
+.specs {
+
+	width: 100px;
+	height: 140px;
+	float: right;
+	font-size: 10pt;
+	text-align: left;
+	padding-right: 10px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="outer">
+
+
+<div id="header">
+
+<div class="nav"
+style="
+
+	margin-left: -10%;
+	background-image: url(grey2.jpg);
+	float: left;
+
+
+">Home</div>
+
+<div class="dropdown">
+
+  <button onclick="myFunction()" class="dropbtn">Shop</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="letters.html">Letters</a>
+    <a href="states.html">States</a>
+    <a href="sports.html">Sports</a>
+  </div>
+</div></a>
+
+
+<a href="about.html">
+<div class="nav"
+style="
+
+	float: left;
+
+">About Us</div></a>
+
+<a href="contact.html">
+<div class="nav"
+style="
+	float: left;
+
+">Contact</div></a>
+
+<h1>Who Are We?</h1>
+
+<h3>We're some chill dudes just hangin' out.</h3>
+
+
+</div> <!--close header-->
+
+
+
+
+
+
+<div id= "boxes">
+
+
+
+<div class="circlebox"
+style="
+	margin-left: -58px;
+
+">
+
+<div class="circle"
+style="
+
+    background-image: url(usadan.jpg);
+    background-size: 200px 290px;
+    background-repeat: no-repeat;
+
+
+">
+</div>
+
+
+<h1>Dan Sheetz</h1>
+<h3>Co-Founder - C-O</h3>
+
+<div class="desc">
+<div class="specs">
+	<br/>
+USC<br/>
+<hr width="100%"/>
+Boston, MA<br/>
+<hr width="100%"/>
+Soccer<br/>
+<hr width="100%"/>
+Beta Theta Pi<br/>
+</div><!--close qs-->
+
+
+<div class="qs">
+	<br/>
+School:<br/>
+<hr width="110%"/>
+Home:<br/>
+<hr width="110%"/>
+Sport:<br/>
+<hr width="110%"/>
+Greek:<br/>
+</div><!--close specs-->
+Dan Sheetz is guy from Boston who loves Boston sports teams more than anything else that exists in the world. Besides food. First team is, of course, the patriots. They are followed closely by the Boston Celtics while the Red Sox edge out the Bruins for third place.
+</div><!--close desc-->
+</div> <!--close circlebox-->
+
+
+
+<div class="circlebox"
+style="
+	margin-left:20px;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	padding-left: 8px;
+	padding-right: 8px;
+
+">
+
+<div class="circle"
+style="
+
+    background-image: url(jet.jpg);
+    background-size: 250px 200px;
+    background-repeat: no-repeat;
+
+
+">
+</div>
+
+
+<h1>Jet Kwok</h1>
+<h3>Co-Founder - C-O</h3>
+
+<div class="desc">
+<div class="specs">
+	<br/>
+USC<br/>
+<hr width="100%"/>
+Boston, MA<br/>
+<hr width="100%"/>
+Dance<br/>
+<hr width="100%"/>
+Unafiliated<br/>
+</div><!--close qs-->
+
+
+<div class="qs">
+	<br/>
+School:<br/>
+<hr width="110%"/>
+Home:<br/>
+<hr width="110%"/>
+Sport:<br/>
+<hr width="110%"/>
+Greek:<br/>
+</div><!--close specs-->
+Jet is from Boston too. Except he actually is. Dan is secretly from a suburb of Boston called Needham. Doesn't Matter. This is Jet's bio. Anyway, he's originally from Macau and his birth name is Chi. He changed it to 'Jet' when he moved here. Pretty dope.
+</div><!--close desc-->
+</div> <!--close circlebox-->
+
+
+
+<div class="circlebox"
+style="
+	margin-left: 20px;
+
+">
+
+<div class="circle"
+style="
+
+    background-image: url(chris.jpg);
+    background-size: 230px 220px;
+    background-repeat: no-repeat;
+
+
+">
+</div>
+
+
+<h1>Chris Caskey</h1>
+<h3>Co-Founder - C-O</h3>
+<div class="desc">
+<div class="specs">
+	<br/>
+USC<br/>
+<hr width="100%"/>
+Los Angeles, CA<br/>
+<hr width="100%"/>
+Volleyball<br/>
+<hr width="100%"/>
+Sigma Chi<br/>
+</div><!--close qs-->
+
+
+<div class="qs">
+	<br/>
+School:<br/>
+<hr width="110%"/>
+Home:<br/>
+<hr width="110%"/>
+Sport:<br/>
+<hr width="110%"/>
+Greek:<br/>
+</div><!--close specs-->
+Chris is from California. Which is chill. He hails specifically from Manhattan Beach, CA which is home to some of the gnarliest waves in the world. This guy also plays guitar and, I can imagine, does other stuff too! A valued member of any team fur-shure.
+</div><!--close desc-->
+</div> <!--close circlebox-->
+
+
+</div> <!--close boxes-->
+
+
+
+</div> <!--close outer-->
+
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+</html>
