@@ -1,0 +1,19 @@
+#header {
+
+	font-family: futura;
+	color: #320182;
+}
+
+#subheader p {
+
+	font-family: futura;
+	font-size: 14pt;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	color: #999999;
+}
+
+#content ul {
+
+	list-style-type: none;
+}
