@@ -1,0 +1,201 @@
+body {
+
+	padding-right: 350px;
+	max-width: 900px;
+}
+
+body hr {
+
+	width: 460px;
+	margin-left: -5px;
+	max-width: 460px;
+
+}
+
+body img {
+
+	position: relative;
+}
+
+
+@font-face {
+  font-family: 'Campton-BoldDEMO';
+  src: url('Campton-BoldDEMO.eot');
+  src: url('Campton-BoldDEMO.eot?#iefix') format('embedded-opentype'),
+       url('Campton-BoldDEMO.woff2') format('woff2'),
+       url('Campton-BoldDEMO.woff') format('woff'),
+       url('Campton-BoldDEMO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#rock1 {
+
+	position: absolute; 
+	width: 16.5%;
+	height: 11.86%; 
+	top: 302px; 
+	left: 67.8%; 
+	-webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: left;
+    transition-duration: 2s;
+
+}
+
+#rock2 {
+
+	position: absolute;
+	width: 22.3%;
+	height: 14%; 
+	top: 379px;
+	left: 63.27%;
+	-webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: left;
+    transition-duration: 2s; 
+}
+
+#rock3 {
+
+	position: absolute;
+	width: 28%; 
+	height: 14.7%;
+	top: 460px;
+	left: 61.7%;
+	-webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: left;
+    transition-duration: 2s; 
+}
+
+#sand {
+
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	max-height: 760px;
+	z-index: -1;
+}
+
+
+
+#rock1:hover {
+
+ 	z-index: 2;
+}
+
+#rock2:hover {
+	
+ 	z-index: 2;
+}
+
+#rock3:hover {
+
+ 	z-index: 2;
+}
+
+
+
+
+#container {
+
+	width: 500px;
+	margin-left: 8%;
+	margin-right: 60%;
+	position: absolute;
+	bottom: 0px;
+	top: 20px;
+	left: 0px;
+	right: 0px;
+
+}
+
+#header {
+
+	font-size: 40pt;
+	font-family: Campton-BoldDEMO;
+	color: #3C91E6;
+	float: left;
+	margin-top: -60px;
+	max-width: 500px;
+	text-align: center;
+
+}
+
+#header h1 {
+
+	line-height: 100px;
+}
+
+#header hr {
+
+	margin-top: -60px;
+}
+
+#subheader {
+
+	width: 230px;
+	margin-top: -10px;
+	font-size: 24pt;
+	font-family: Campton-BoldDEMO;
+	color: #3C91E6;
+	float: left;
+	margin-top: -45px;
+	margin-bottom: -20px;
+	line-height: 60px;
+	text-align: left;
+
+}
+
+#subheader hr {
+
+	margin-top: -20px;
+}
+
+#desc {
+
+	width: 220px;
+	float: left;
+	max-width: 220px;
+	text-align: right;
+	color: #03256C;
+	margin-top: -30px;
+}
+
+#desc p {
+
+	font-size: 18pt;
+	font-family: Campton-BoldDEMO;
+	color: #03256C;
+
+
+}
+
+#links {
+
+	float: left;
+	width: 450px;
+	float: left;
+	max-width: 450px;
+	text-align: center;
+	font-size: 12pt;
+	font-family: Campton-BoldDEMO;
+	color: #3C91E6;
+}
+
+#links a {
+
+	text-decoration: none;
+	color: #03256C;
+
+}
+
+#links a:visited {
+	
+	text-decoration: none;
+	color: #03256C;
+
+}
+
