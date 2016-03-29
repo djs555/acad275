@@ -27,7 +27,6 @@ body div {
 	height: 35%;
 	background-image: url(boston.jpg);
 	background-size: 100% 100%;
-	border: 1px solid black;
 }
 
 #nav {
@@ -38,15 +37,14 @@ body div {
 	background-color: #FAE600;
 	overflow-x: hidden;
     overflow-y: hidden;
-    border: 1px solid black;
 
 }
 
 #nav li {
 
 	display: inline;
-	font-size: 14pt;
-	font-family: Campton-BoldDEMO;
+	font-size: 1.2em;
+	font-family: verdana;
 	float: right;
 	color: black;
 	padding-top: 25px;
@@ -87,9 +85,9 @@ body div {
 
 	width: 71%;
 	max-width: 800px;
-	height: 500%;
 	margin:auto;
 	margin-top: 50px;
+	margin-bottom: 100px;
 	overflow-x: hidden;
     overflow-y: hidden;
 
@@ -106,41 +104,46 @@ body div {
 
 #brady {
 
-	width: 340px;
+	width: 42.7%;
 	position: relative;
 	float: left;
+}
+#brady h1 {
+
+	margin-top: 30%;
 }
 
 #innout {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
 }
 
 #innout h1 {
 
-margin-top: 100px;
+margin-top: 20%;
 }
 
 #chance {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
 
 }
 #chance h1 {
 
-margin-top: 80px;
+margin-top: -2%;
+font-size: 2.5em;
 }
 
 #pulp {
 
-	width: 340px;
+	width: 42.7%;
 	position: relative;
 	float: left;
-	margin-top: -202px;
+	margin-top: -26.8%;
 
 }
 
@@ -152,7 +155,7 @@ margin-top: 230px;
 
 #kalahari {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
 
@@ -160,9 +163,10 @@ margin-top: 230px;
 
 #blaze {
 
-	width: 773px;
+	width: 98.6%;
 	position: relative;
 	float: left;
+	margin-top: -2.4%
 }
 #blaze h1 {
 
@@ -172,16 +176,15 @@ margin-top: 100px;
 
 #kanye {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
-
 }
 
 
 #kd {
 
-	width: 340px;
+	width: 42.7%;
 	position: relative;
 	float: left;
 }
@@ -193,10 +196,10 @@ margin-top: 200px;
 
 #bill {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
-	margin-top: -135px;
+	margin-top: -18.5%;
 }
 #bill h1 {
 
@@ -205,7 +208,7 @@ margin-top: 110px;
 
 #cape {
 
-	width: 340px;
+	width: 42.7%;
 	position: relative;
 	float: left;
 }
@@ -217,10 +220,10 @@ margin-top: 90px;
 
 #eagles {
 
-	width: 433px;
+	width: 55.9%;
 	position: relative;
 	float: left;
-	margin-top: -117px;
+	margin-top: -15.8%;
 }
 
 #eagles h1 {
@@ -231,7 +234,7 @@ margin-top: 150px;
 
 #van {
 
-	width: 340px;
+	width: 42.7%;
 	position: relative;
 	float: left;
 }
@@ -242,39 +245,12 @@ margin-top: 90px;
 
 #celtics {
 
-	width: 773px;
+	width: 98.6%;
 	position: relative;
 	float: left;
 }
 #celtics h1 {
 
-margin-top: 160px;
-}
-
-#maine {
-
-	width: 300px;
-	position: relative;
-	float: left;
-
-}
-
-#maine h1 {
-
-margin-top: 180px;
-}
-
-#matrix {
-
-	width: 300px;
-	position: relative;
-	float: left;
-
-}
-
-#matrix h1 {
-
-margin-top: 230px;
 }
 .hover {
 
@@ -286,15 +262,13 @@ margin-top: 230px;
 	position: absolute;
 	top: 0px;
 	float: left;
-
 }
 
 .hover h1 {
 
 	text-align: center;
-	margin-top: 120px;
-	font-family: Campton-BoldDEMO;
-	font-size: 35pt;
+	font-family: verdana;
+	font-size: 275%;
 	color: black;
 
 }
@@ -310,4 +284,23 @@ opacity: 1;
 
 }
 
-
+@media screen and (max-width: 1200px) {
+#nav li {font-size: 1em;padding-top: 30px;}}
+@media screen and (max-width: 1200px) {
+#innout h1 {margin-top: 15%;}}
+@media screen and (max-width: 1200px) {
+#brady h1 {margin-top: 25%;}}
+@media screen and (max-width: 1000px) {
+#nav li {font-size: 0.8em; padding-top: 33px;}}
+@media screen and (max-width: 710px) {
+#nav li {display: none;}}
+@media screen and (max-width: 710px) {
+#nav {width: 100%; margin: auto;}}
+@media screen and (max-width: 710px) {
+#nav img{margin: 2.5%;}}
+@media screen and (max-width: 710px) {
+#brady h1 {margin-top: 15%;}}
+@media screen and (max-width: 710px) {
+#innout h1 {margin-top: 10%;}}
+@media screen and (max-width: 710px) {
+#content h1 {margin-top: 10%; font-size: 20pt;}}
