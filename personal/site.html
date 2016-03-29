@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<title>
+		Propadanda
+	</title>
+
+<!-- internal stylesheet vvv-->
+
+<link rel="stylesheet" type="text/css" href="styles/propadanda.css">
+<link rel="stylesheet" type="text/css" href="styles/fonts/scobofonts.css">
+
+<!-- Jquery script vvv-->
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+</head>
+<body>
+<div id="nav">
+	<div id="logo">
+		<h1>Propadanda</h1>
+	</div>
+
+<div id="nav-buttons">
+
+<ul>
+<a href="scobo2.html"><li>Home</li></a>
+<a href="dandasports.html"><li>Sports</li></a>
+<a href="dandafood.html"><li>Food</li></a>
+</ul>
+
+</div><!--nav-buttons-->
+</div><!--nav-->
+<br/>
+<br/>
+<br/>
+<div id="header" style="background-image: url(boston.jpg); background-size: 100%; background-repeat: no-repeat; width: 100%; min-height: 95%;padding-top: 10px;">
+<h1 class="headerh1">My Two Cents.</h1>
+<h2 class="headerh2">Dan Sheetz's views on stuff.</h2>
+
+<script>
+function arrowMoveDown() {
+	$("#arrow").delay(00).animate(
+		{top: '15vh'});
+	}
+</script>
+<script>
+function arrowMoveUp() {
+	$("#arrow").delay(00).animate({top: '12vh'});
+	
+	}
+</script>
+
+
+<script>
+
+	$(document).ready(function(){
+		for (i=0; i <1000; i=i+1) {
+			arrowMoveDown();
+			arrowMoveUp();
+			arrowMoveDown();
+			arrowMoveUp();
+
+		}
+	});
+</script>
+<img src="downarrow.png" id="arrow">
+</div><!--header-->
+
+<div id="homecontent">
+	<h1 style="text-align: center;">We Got Articles on Articles</h1>
+	<br/>
+	<h2 style="text-align: center;">on Articles on Articles</h2>
+	<h3 style="text-align: center;">on Articles on Articles.</h3>
+	<h4 style="text-align: center;">But that's all. Just 6.</h4>
+	<br/>
+	<br/><br/><br/><br/>
+	<br/><br/>
+	<img src="rank.png" style="width: 15%; margin-right: auto; margin-top: -5%; margin-left: auto; display: block;">
+	<p style="text-align: center;">We Got Rankings of Stuff.</p>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<img src="reviews.png" style="width: 15%; margin-right: auto; margin-top: -5%; margin-left: auto; display: block;">
+	<p style="text-align: center;">We Got Reviews of Other Stuff.</p>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<img src="me.png" style="width: 25%; margin-right: auto; margin-top: -5%; margin-left: auto; display: block;">
+	<p style="text-align: center;">But Mostly, We Got This Guy's Opinions.</p>
+
+</div><!--homecontent-->
+
+
+</body>
+
+
+</html>
