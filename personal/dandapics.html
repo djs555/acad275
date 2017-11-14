@@ -1,0 +1,329 @@
+<html>
+
+<head>
+	<title>
+		Propadanda::Pics
+	</title>
+
+<!-- internal stylesheet vvv-->
+
+<link rel="stylesheet" type="text/css" href="styles/propadanda.css">
+<link rel="stylesheet" type="text/css" href="styles/fonts/scobofonts.css">
+
+
+<style>
+#gallery{
+
+	width: 100%;
+	height: 85%;
+}
+
+#mainphoto {
+	margin: auto;
+	display: block;
+	width: 60%;
+	z-index: -1;
+
+}
+
+#left {
+
+	width: 5%;
+	margin-left: 10%;
+	margin-top: 17%;
+	float: left;
+	opacity: 0.5;
+}
+
+#right {
+
+	width: 5%;
+	margin-top: 17%;
+	float: right;
+	opacity: 0.5;
+	margin-right: 10%;
+}
+
+#left:hover {opacity: 1;}
+#right:hover {opacity: 1;}
+
+#thumbs{
+text-align: center;
+}
+.thumb {width: 9%;display: inline-block;opacity: 0.6;}
+
+.butt{
+	font-family: quicksand-bold;
+	width: 45%;
+	text-align: center;
+	color: black;
+	font-size: 2vw;
+
+}
+
+#play {background-color: #8ab7e2; float: left;}
+#pause {background-color:#e55c49; float: right;}
+#gs{background-color:#f6cf5b; float: left;}
+#invert{background-color:#f6cf5b; float: right;}
+#sat{background-color:#f6cf5b; float: left;}
+#reg{background-color:#f6cf5b; float: right;}
+
+
+
+#buttons {
+	margin: auto;
+	width: 30%;
+
+}
+
+.grayscale {
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.invert {
+
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.saturate{
+
+	-webkit-filter: saturate(300%);
+    filter: saturate(300%);
+}
+
+h2 {font-family: avenir-medium; font-size: 1.5vw; text-align: center;}
+
+</style>
+<!-- Jquery script vvv-->
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script>
+
+var source = [
+
+	"brady1.jpg",
+	"edelman1.jpg",
+	"gronk1.jpg",
+	"pierce1.jpg",
+	"isiah1.jpg",
+	"durant1.jpg",
+	"russell1.jpg",
+	"messi1.jpg",
+	"neymar1.jpg",
+	"aguero1.jpg",
+
+];
+
+var caption = [
+
+	"Tom Brady",
+	"Julian Edelman",
+	"Rob Gronkowski",
+	"Paul Pierce",
+	"Isiah Thomas",
+	"Kevin Durant",
+	"Russell Westbrook",
+	"Lionel Messi",
+	"Neymar Jr.",
+	"Sergio Aguero"
+
+];
+
+var link = [
+
+	"https://en.wikipedia.org/wiki/Tom_Brady",
+	"https://en.wikipedia.org/wiki/Julian_Edelman",
+	"https://en.wikipedia.org/wiki/Rob_Gronkowski",
+	"https://en.wikipedia.org/wiki/Paul_Pierce",
+	"https://en.wikipedia.org/wiki/Isaiah_Thomas_(basketball)",
+	"https://en.wikipedia.org/wiki/Kevin_Durant",
+	"https://en.wikipedia.org/wiki/Russell_Westbrook",
+	"https://en.wikipedia.org/wiki/Lionel_Messi",
+	"https://en.wikipedia.org/wiki/Neymar",
+	"https://en.wikipedia.org/wiki/Sergio_Aguero"
+
+];
+
+</script>
+
+<script>
+var fish;
+$(document).ready(function(){
+
+	var picnumber = 0
+	$("#thumbs, #left, #right, #mainphoto, #pic-logo").hide();
+	$("#thumbs, #left, #right, #mainphoto, #pic-logo").fadeIn(1000);
+	$("#right").on("click", function(){
+		if(picnumber != source.length - 1){
+			picnumber = picnumber +1;
+			$("#mainphoto").attr("src", source[picnumber]);
+			$("#caption").html(caption[picnumber]);
+				}
+		else {
+			picnumber = 0;
+			$("#mainphoto").attr("src", source[picnumber]);
+			$("#caption").html(caption[picnumber]);
+				}
+			})
+
+
+	$("#left").on("click", function(){
+		if(picnumber != source.length - 1){
+			picnumber = picnumber -1;
+			$("#mainphoto").attr("src", source[picnumber]);
+			$("#caption").html(caption[picnumber]);
+				}
+		else {
+			picnumber = 0;
+			$("#mainphoto").attr("src", source[picnumber]);
+			$("#caption").html(caption[picnumber]);
+				}
+			})
+
+
+	$(".thumb").on("mouseover", function(){
+			$(this).css("opacity", 1);
+			})
+	$(".thumb").on("mouseout", function(){
+			$(this).css("opacity", 0.6);
+			})
+	$(".thumb").on("click", function(){
+		$("#mainphoto").attr("src", $(this).attr("src"));
+		document.getElementById("caption").innerHTML=caption[source.indexOf($(this).attr("src"))];
+			})
+
+	$("#play").on("click", function(){
+
+		fish = setInterval(function(){play();}, 1500);
+	});
+});
+
+
+var z = 0;
+function play(){
+	z = z+1;
+	$("#mainphoto").hide().attr("src", source[z]).fadeIn();
+	$("#caption").hide().html(caption[z]).fadeIn();
+
+	if(z>8){
+		z=-1;
+	}
+}
+function pause(){
+		clearInterval(fish);
+	}
+
+function tolink(){
+	for(i=0;i<10;i++){
+		if($('#mainphoto').attr("src") == source[i]){
+			
+			window.open(link[i]);
+		}
+	}
+}
+
+function filtergs(){
+
+	$('#mainphoto').addClass("grayscale");
+	$('#mainphoto').removeClass("invert");
+	$('#mainphoto').removeClass("saturate");
+}
+
+function filterinvert(){
+
+	$('#mainphoto').addClass("invert");
+	$('#mainphoto').removeClass("grayscale");
+	$('#mainphoto').removeClass("saturate");
+}
+
+function filtersat(){
+	$('#mainphoto').addClass("saturate");
+	$('#mainphoto').removeClass("invert");
+	$('#mainphoto').removeClass("grayscale");
+}
+
+function filterreg(){
+	$('#mainphoto').removeClass("saturate");
+	$('#mainphoto').removeClass("invert");
+	$('#mainphoto').removeClass("grayscale");
+}
+</script>
+
+
+</head>
+<body>
+<div id="nav">
+	<div id="logo">
+		<h1>Propadanda</h1>
+	</div>
+
+<div id="nav-buttons">
+
+<ul>
+<a href="site.html"><li>Home</li></a>
+<a href="dandasports.html"><li>Sports</li></a>
+<a href="dandafood.html"><li>Food</li></a>
+<a href="dandaquiz.html"><li>Quiz</li></a>
+<a href="dandapics.html"><li>Pics</li></a>
+</ul>
+
+</div><!--nav-buttons-->
+</div><!--nav-->
+<br/>
+<br/>
+<br/>
+<div id="content">
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+<div id="pic-logo">
+<img class="headerfood" src="camera.png" style="width: 15%; display: block; margin-left: auto; margin-right: auto; margin-top:1%;">
+<h1  class="headerfood" style="text-align: center; color: black; margin-top: 1%;">Propadanda Pics</h1>
+<h2>Click the image to find out more information<br/>about these amazing athletes</h2>
+</div><!--pic-logo-->
+
+<br/><br/>
+<div id="gallery">
+<img id="left" src="left.png">
+<img id="right" src="right.png">
+<img id="mainphoto" src="brady1.jpg" onclick = tolink()>
+<h1 id="caption" style="text-align:center;">Tom Brady</h1>
+
+<div id="thumbs">
+<img src="brady1.jpg" class="thumb">
+<img src="edelman1.jpg" class="thumb">
+<img src="gronk1.jpg" class="thumb">
+<img src="pierce1.jpg" class="thumb">
+<img src="isiah1.jpg" class="thumb">
+<img src="durant1.jpg" class="thumb">
+<img src="russell1.jpg" class="thumb">
+<img src="messi1.jpg" class="thumb">
+<img src="neymar1.jpg" class="thumb">
+<img src="aguero1.jpg" class="thumb">
+
+</div><!--thumbs-->
+<br/>
+<br/>
+<div id="buttons">
+<button id="play" class="butt">Play</button>
+<button id="pause" class="butt" onclick = pause()>Pause</button>
+<br/><br/>
+<button id="gs" class="butt" onclick = filtergs()>Filter 1</button>
+<button id="invert" class="butt" onclick = filterinvert()>Filter 2</button>
+<br/><br/>
+<button id="sat" class="butt" onclick = filtersat()>Filter 3</button>
+<button id="reg" class="butt" onclick = filterreg()>Restore</button>
+<input type="text" id="">
+</div><!--buttons-->
+</div><!--gallery-->
+</div><!--content-->
+
+</body>
+
+
+</html>

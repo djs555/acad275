@@ -1,36 +1,42 @@
+<!doctype html>
 <html>
-
 <head>
-	<title>
-		Propadanda::Food
-	</title>
+  <meta charset="utf-8">
+  <title>Propadanda Food Gallery</title>
+  
 
-<!-- internal stylesheet vvv-->
+  <link rel="stylesheet" href="styles/propadanda.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="galleria/galleria-1.4.2.js"></script>
 
-<link rel="stylesheet" type="text/css" href="styles/propadanda.css">
-<link rel="stylesheet" type="text/css" href="styles/fonts/scobofonts.css">
 
-<!-- Jquery script vvv-->
+  <style>
+  .galleria {
 
-<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    width: 80%;
+    height: 300px;
+    margin: auto;
+  }
+  body.galleria-container{background:#e6e6e6}
+  .galleria img{height: 300px;}
 
-<script>
-$(document).ready(function(){
-	$(".links").on("mouseover", function(){
-			$(this).css("background-color","white");
-			});
-	$(".links").on("mouseout", function(){
-			$(this).css("background-color","#E6E6E6");
-			});
-	});
-</script>
+ @media screen and (max-width: 570px){
 
+  #nav{color: blue;}
+
+}
+  </style>
+  
 </head>
 <body>
+<script>
+
+
+</script>
 <div id="nav">
-	<div id="logo">
-		<h1>Propadanda</h1>
-	</div>
+  <div id="logo">
+    <h1>Propadanda</h1>
+  </div>
 
 <div id="nav-buttons">
 
@@ -38,6 +44,8 @@ $(document).ready(function(){
 <a href="site.html"><li>Home</li></a>
 <a href="dandasports.html"><li>Sports</li></a>
 <a href="dandafood.html"><li>Food</li></a>
+<a href="dandaquiz.html"><li>Quiz</li></a>
+<a href="dandapics.html"><li>Pics</li></a>
 </ul>
 
 </div><!--nav-buttons-->
@@ -46,32 +54,43 @@ $(document).ready(function(){
 <br/>
 <br/>
 <div id="content">
-	<br/>
-	<br/>
-	<br/>
-	<br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 <img src="food.png" style="width: 25%; display: block; margin-left: auto; margin-right: auto; margin-top:1%;">
-<h1 style="text-align: center; color: black; margin-top: 1%;">Propadanda Food</h1>
-</br></br>
-<a href="cmgtor.html"><div class="links">
-	<br/>
-	<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Chipotle_Mexican_Grill_logo.svg/1024px-Chipotle_Mexican_Grill_logo.svg.png">
-	<h3>Chipotle Mexican Grill:<br/>
-		The Official Review</h3>
-</div><!--links--></a>
-<a href="t10fir.html"><div class="links">
-	<br/>
-	<img src="pizza.png" class="nba">
-	<h3>Top 10 Foods:<br/>The Inarguable Ranking</h3>
-</div><!--links--></a>
-<a href="brfnm.html"><div class="links">
-		<br/>
-	<img src="http://www.udlcenter.org/sites/udlcenter.org/files/Massachusetts_0.png">
-	<h3>Best Restaurants By Far:<br/>Needham, Mass.</h3>
-</div><!--links--></a>
-</div><!--content-->
+<h1 style="text-align: center; color: black; margin-top: 1%;">Propadanda Food Gallery</h1>
+<hr width="60%";/>
+<br/>
+    <br/>
+
+<div class="galleria">
+    <img src="lobster1.jpg"/>
+    <img src="sushi1.jpg"/>
+    <img src="chipotle1.jpg"/>
+    <img src="eggs1.jpg"/>
+    <img src="pizza1.jpg"/>
+    <img src="caesar1.jpg"/>
+    <img src="guac1.jpg"/>
+    <img src="spa1.jpg"/>
+    <img src="cheese1.jpg"/>
+    <img src="innout1.jpg"/>
+</div><!--galleria-->
+
+    <script>
+Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+     // Galleria.run('.galleria',{
+     //  autoplay: true;
+     // });
+Galleria.run('.galleria', {
+    transition: 'fade',
+    //imageCrop: true,
+    autoplay: 1500 // will move forward every 1.5 seconds
+
+});
+
+    </script>
+
 
 </body>
-
-
 </html>

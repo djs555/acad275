@@ -1,0 +1,2164 @@
+<html>
+
+<head>
+	<title>
+		Propadanda::Quiz
+	</title>
+
+<!-- internal stylesheet vvv-->
+
+<link rel="stylesheet" type="text/css" href="styles/propadanda.css">
+<link rel="stylesheet" type="text/css" href="styles/fonts/scobofonts.css">
+
+<!-- Jquery script vvv-->
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script src="js.cookie.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$("#quiz1").hide();
+	$("#quiz2").hide();
+	$("#quiz3").hide();
+	$("#quiz4").hide();
+	$("#quiz5").hide();
+	$("#quiz6").hide();
+	$("#quiz7").hide();
+	$("#quiz8").hide();
+	$("#quiz9").hide();
+	$("#quiz10").hide();
+	$(".headerquiz").hide();
+	$(".choose").hide();
+	$("#searchbox").hide();
+	$("#searchbox").fadeIn(1000);
+	$(".choose").fadeIn(1000);
+	$(".headerquiz").fadeIn(1000);
+
+	$("#choose0").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeIn(1000);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('nbalastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('nbalastscore') + "/10 or " + Cookies.get('nbalastscore')*10 + "% on this quiz.");}
+			})
+	$("#choose1").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeIn(1000);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('nfllastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('nfllastscore') + "/10 or " + Cookies.get('nfllastscore')*10 + "% on this quiz.");}
+			})
+	$("#choose2").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeIn(1000);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('foodlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('foodlastscore') + "/10 or " + Cookies.get('foodlastscore')*10 + "% on this quiz.");}
+			})
+	$("#choose3").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeIn(1000);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('burgerlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('burgerlastscore') + "/10 or " + Cookies.get('burgerlastscore')*10 + "% on this quiz.");}
+			})
+	$("#choose4").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeIn(1000);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('epllastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('epllastscore') + "/9 or " + (Cookies.get('epllastscore')*0.11)*100 + "% on this quiz.");}
+			})
+	$("#choose5").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeIn(1000);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('ligalastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('ligalastscore') + "/6 or " + (Cookies.get('ligalastscore')*(1/6))*100 + "% on this quiz.");}
+			})
+	$("#choose6").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeIn(1000);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('fruitlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('fruitlastscore') + "/6 or " + (Cookies.get('fruitlastscore')*(1/6))*100 + "% on this quiz.");}
+			})
+	$("#choose7").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeIn(1000);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('histlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('histlastscore') + "/7 or " + (Cookies.get('histlastscore')*(1/7))*100 + "% on this quiz.");}
+			})
+	$("#choose8").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeIn(1000);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('mlblastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('mlblastscore') + "/6 or " + (Cookies.get('mlblastscore')*(1/6))*100 + "% on this quiz.");}
+			})
+	$("#choose9").on("click", function(){
+		$(".choose").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeIn(1000);
+		if(Cookies.get('baseballlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('baseballlastscore') + "/6 or " + (Cookies.get('baseballlastscore')*(1/6))*100 + "% on this quiz.");}
+			})
+
+
+
+	$(".links").on("mouseover", function(){
+			$(this).css("background-color","white");
+			})
+	$(".links").on("mouseout", function(){
+			$(this).css("background-color","#E6E6E6");
+			})
+	});
+
+</script>
+
+<script>
+var score = 0;
+var checkquizoneanswers = function()
+{
+	if(document.getElementById('b11').checked){
+		score += 1;}
+	if(document.getElementById('d21').checked){
+		score += 1;}
+	if(document.getElementById('a31').checked){
+		score += 1;}
+	if(document.getElementById('b41').checked){
+		score += 1;}
+	if(document.getElementById('a51').checked){
+		score += 1;}
+	if(document.getElementById('c61').checked){
+		score += 1;}
+	if(document.getElementById('d71').checked){
+		score += 1;}
+	if(document.getElementById('c81').checked){
+		score += 1;}
+	if(document.getElementById('b91').checked){
+		score += 1;}
+	if(document.getElementById('b101').checked){
+		score += 1;}
+	alert("Score: " + score*10 + "%. You had " + score + " out of 10 questions answered correctly.");
+	Cookies.set("nbalastscore", score);
+	//console.log("abcdafskjhfjksd");
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquiztwoanswers = function()
+{
+	if(document.getElementById('c12').checked){
+		score += 1;}
+	if(document.getElementById('a22').checked){
+		score += 1;}
+	if(document.getElementById('a32').checked){
+		score += 1;}
+	if(document.getElementById('d42').checked){
+		score += 1;}
+	if(document.getElementById('d52').checked){
+		score += 1;}
+	if(document.getElementById('b62').checked){
+		score += 1;}
+	if(document.getElementById('d72').checked){
+		score += 1;}
+	if(document.getElementById('a82').checked){
+		score += 1;}
+	if(document.getElementById('c92').checked){
+		score += 1;}
+	if(document.getElementById('c102').checked){
+		score += 1;}
+	alert("Score: " + score*10 + "%. You had " + score + " out of 10 questions answered correctly.");
+	Cookies.set("nfllastscore", score);
+	score = 0;
+	document.location.reload(true);
+} 
+
+var checkquizthreeanswers = function()
+{
+	if(document.getElementById('c13').checked){
+		score += 1;}
+	if(document.getElementById('c23').checked){
+		score += 1;}
+	if(document.getElementById('d33').checked){
+		score += 1;}
+	if(document.getElementById('b43').checked){
+		score += 1;}
+	if(document.getElementById('c53').checked){
+		score += 1;}
+	if(document.getElementById('a63').checked || document.getElementById('b63').checked){
+		score += 1;}
+	if(document.getElementById('b73').checked){
+		score += 1;}
+	if(document.getElementById('a83').checked){
+		score += 1;}
+	if(document.getElementById('d93').checked){
+		score += 1;}
+	if(document.getElementById('b103').checked){
+		score += 1;}
+	alert("Score: " + score*10 + "%. You had " + score + " out of 10 questions answered correctly.");
+	Cookies.set("foodlastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquizfouranswers = function()
+{
+	if(document.getElementById('d14').checked){
+		score += 1;}
+	if(document.getElementById('b24').checked){
+		score += 1;}
+	if(document.getElementById('d34').checked || document.getElementById('c34').checked){
+		score += 1;}
+	if(document.getElementById('a44').checked || document.getElementById('b44').checked){
+		score += 1;}
+	if(document.getElementById('b54').checked){
+		score += 1;}
+	if(document.getElementById('d64').checked || document.getElementById('b64').checked){
+		score += 1;}
+	if(document.getElementById('a74').checked || document.getElementById('b64').checked || document.getElementById('d64').checked){
+		score += 1;}
+	if(document.getElementById('d84').checked){
+		score += 1;}
+	if(document.getElementById('d94').checked){
+		score += 1;}
+	if(document.getElementById('c104').checked){
+		score += 1;}
+	alert("Score: " + score*10 + "%. You had " + score + " out of 10 questions answered correctly.");
+	Cookies.set("burgerlastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquizfiveanswers = function()
+{
+	if(document.getElementById('d15').checked){
+		score += 1;}
+	if(document.getElementById('c25').checked){
+		score += 1;}
+	if(document.getElementById('b35').checked){
+		score += 1;}
+	if(document.getElementById('d45').checked){
+		score += 1;}
+	if(document.getElementById('b55').checked){
+		score += 1;}
+	if(document.getElementById('d65').checked){
+		score += 1;}
+	if(document.getElementById('a75').checked){
+		score += 1;}
+	if(document.getElementById('a85').checked){
+		score += 1;}
+	if(document.getElementById('b95').checked){
+		score += 1;}
+	scorepercentage = score*(0.11)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 9 questions answered correctly.");
+	Cookies.set("epllastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquizsixanswers = function()
+{
+	if(document.getElementById('c16').checked){
+		score += 1;}
+	if(document.getElementById('b26').checked){
+		score += 1;}
+	if(document.getElementById('a36').checked){
+		score += 1;}
+	if(document.getElementById('a46').checked){
+		score += 1;}
+	if(document.getElementById('d56').checked){
+		score += 1;}
+	if(document.getElementById('d66').checked){
+		score += 1;}
+	scorepercentage = score*(1/6)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 6 questions answered correctly.");
+	Cookies.set("ligalastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquizsevenanswers = function()
+{
+	if(document.getElementById('a17').checked){
+		score += 1;}
+	if(document.getElementById('b27').checked){
+		score += 1;}
+	if(document.getElementById('c37').checked){
+		score += 1;}
+	if(document.getElementById('d47').checked){
+		score += 1;}
+	if(document.getElementById('a57').checked){
+		score += 1;}
+	if(document.getElementById('b67').checked){
+		score += 1;}
+	scorepercentage = score*(1/6)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 6 questions answered correctly.");
+	Cookies.set("fruitlastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquizeightanswers = function()
+{
+	if(document.getElementById('d18').checked){
+		score += 1;}
+	if(document.getElementById('c28').checked){
+		score += 1;}
+	if(document.getElementById('b38').checked){
+		score += 1;}
+	if(document.getElementById('a48').checked){
+		score += 1;}
+	if(document.getElementById('a58').checked){
+		score += 1;}
+	if(document.getElementById('b68').checked){
+		score += 1;}
+	if(document.getElementById('b78').checked){
+		score += 1;}
+	scorepercentage = score*(1/7)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 7 questions answered correctly.");
+	Cookies.set("histlastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquiznineanswers = function()
+{
+	if(document.getElementById('c19').checked){
+		score += 1;}
+	if(document.getElementById('b29').checked){
+		score += 1;}
+	if(document.getElementById('a39').checked){
+		score += 1;}
+	if(document.getElementById('d49').checked){
+		score += 1;}
+	if(document.getElementById('c59').checked){
+		score += 1;}
+	if(document.getElementById('a69').checked){
+		score += 1;}
+	scorepercentage = score*(1/6)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 6 questions answered correctly.");
+	Cookies.set("mlblastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+
+var checkquiztenanswers = function()
+{
+	if(document.getElementById('c110').checked){
+		score += 1;}
+	if(document.getElementById('b210').checked){
+		score += 1;}
+	if(document.getElementById('a310').checked){
+		score += 1;}
+	if(document.getElementById('d410').checked){
+		score += 1;}
+	if(document.getElementById('c510').checked){
+		score += 1;}
+	if(document.getElementById('a610').checked){
+		score += 1;}
+	scorepercentage = score*(1/6)*100
+	scorepercentage = scorepercentage.toFixed([0])
+	alert("Score: " + scorepercentage + "%. You had " + score + " out of 6 questions answered correctly.");
+	Cookies.set("baseballlastscore", score);
+	score = 0;
+	document.location.reload(true);
+}
+</script>
+
+<script>
+var quizname = [
+
+		"NBA",
+		"NFL",
+		"Food",
+		"Burger",
+		"EPL",
+		"La Liga",
+		"Fruit",
+		"Basketball History",
+		"Baseball History",
+		"MLB"
+];
+
+var quizcat = [
+
+		"sports",
+		"sports",
+		"food",
+		"food",
+		"sports",
+		"sports",
+		"food",
+		"sports",
+		"sports",
+		"sports"
+];
+
+var quiztags = [
+
+		"basketball",
+		"football",
+		"foods",
+		"foods",
+		"soccer",
+		"soccers",
+		"foods",
+		"basketball",
+		"baseball",
+		"baseball"
+];
+
+</script>
+
+<style>
+.question {text-align: center;}
+
+.question h2 {
+	font-family: avenir-medium;
+	text-align: center;
+}
+
+body {
+
+	font-family: quicksand-regular;
+	text-align: left;
+}
+
+#options {margin: auto;}
+
+
+#quiz1, #quiz2, #quiz3 #quiz4, #quiz5. #quiz6, #quiz7, #quiz8, #quiz9, #quiz10 {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.choose {
+	margin: auto;
+	text-align: center;
+	border: 3px solid #e35c49;
+	width: 25%;
+	background-color: #8bb6e1;
+	color: #f6ce5b;
+	visibility: visible;
+}
+.submit {	
+	margin: auto;
+	text-align: center;
+	border: 3px solid #e35c49;
+	width: 30%;
+	height: auto;
+	background-color: #8bb6e1;
+	color: #f6ce5b;
+}
+
+#searchbox {
+	text-align: center;
+}
+</style>
+
+
+<script>
+var showresults = function(userinput){
+var newhtml = "";
+//var quiz="quiz";
+	for (i=0; i<10; i++) {
+		if(quizname[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1 ||
+			quizcat[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1 ||
+			quiztags[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1){
+		//document.getElementById('choose'+i).style.visibility = "visible";
+			//quiz+=i;
+ 			newhtml = newhtml + "<br/><h1 onclick='disp("+i+")'class = 'choose' id = 'choose" + i + "'>" + quizname[i] + " Quiz</h1>";
+			document.getElementById('choosequiz').innerHTML = newhtml;
+				}
+        }
+ }
+
+ var disp = function(i){
+ 	//alert(i);
+ 	var id=i+1;
+ 	var quiz="#quiz"+id;
+ 	$(".choose").fadeOut(500);
+ 	//$("quiz)
+ 	$(quiz).fadeIn(500);
+ 	if(id==1){
+ 		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('nbalastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('nbalastscore') + "/10 or " + Cookies.get('nbalastscore')*10 + "% on this quiz.");}
+	}
+	else if(id==2){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('nfllastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('nfllastscore') + "/10 or " + Cookies.get('nfllastscore')*10 + "% on this quiz.");}
+	}
+		else if(id==3){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('foodlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('foodlastscore') + "/10 or " + Cookies.get('foodlastscore')*10 + "% on this quiz.");}
+	}
+		else if(id==4){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('burgerlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('burgerlastscore') + "/10 or " + Cookies.get('burgerlastscore')*10 + "% on this quiz.");}
+	}
+		else if(id==5){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('epllastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('epllastscore') + "/9 or " + (Cookies.get('fruitlastscore')*(1/9))*100 + "% on this quiz.");}
+	}
+		else if(id==6){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('ligalastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('ligalastscore') + "/6 or " + (Cookies.get('ligalastscore')*(1/6))*100  + "% on this quiz.");}
+	}
+		else if(id==7){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('fruitlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('fruitlastscore') + "/6 or " + (Cookies.get('fruitlastscore')*(1/6))*100  + "% on this quiz.");}
+	}
+		else if(id==8){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('histlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('histlastscore') + "/7 or " + (Cookies.get('histlastscore')*(1/7))*100 + "% on this quiz.");}
+	}
+		else if(id==9){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz10").fadeOut(500);
+		if(Cookies.get('mlblastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('mlblastscore') + "/6 or " + (Cookies.get('mlblastscore')*(1/6))*100 + "% on this quiz.");}
+	}
+
+		else if(id==10){
+ 		$("#quiz1").fadeOut(500);
+		$("#quiz2").fadeOut(500);
+		$("#quiz3").fadeOut(500);
+		$("#quiz4").fadeOut(500);
+		$("#quiz5").fadeOut(500);
+		$("#quiz6").fadeOut(500);
+		$("#quiz7").fadeOut(500);
+		$("#quiz8").fadeOut(500);
+		$("#quiz9").fadeOut(500);
+		if(Cookies.get('baseballlastscore')!=undefined){
+		alert("Last time, you scored " + Cookies.get('baseballlastscore') + "/6 or " + (Cookies.get('baseballlastscore')*(1/6))*100 + "% on this quiz.");}
+	}
+ }
+</script>
+
+
+</head>
+<body>
+<div id="nav">
+	<div id="logo">
+		<h1>Propadanda</h1>
+	</div>
+
+<div id="nav-buttons">
+
+<ul>
+<a href="site.html"><li>Home</li></a>
+<a href="dandasports.html"><li>Sports</li></a>
+<a href="dandafood.html"><li>Food</li></a>
+<a href="dandaquiz.html"><li>Quiz</li></a>
+<a href="dandapics.html"><li>Pics</li></a>
+</ul>
+
+</div><!--nav-buttons-->
+</div><!--nav-->
+<br/>
+<br/>
+<br/>
+<div id="content">
+	<br/>
+	<br/>
+<img class="headerquiz" src="marks.png" style="width: 30%; display: block; margin-left: auto; margin-right: auto; margin-top:1%;">
+<h1 class="headerquiz" style="text-align: center; color: black; margin-top: 1%;">Propadanda Quiz</h1>
+
+<div id="searchbox">
+<input type="text" name="search" id="in"/>
+<input type="button" value="Search" onclick = "showresults(document.getElementById('in').value)"/>
+</div><!--searchbox-->
+
+<div id="choosequiz">
+<br/>
+<h1 class = "choose" id = "choose0">NBA Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose1">NFL Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose2">Food Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose3">Burger Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose4">EPL Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose5">La Liga Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose6">Fruit Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose7">Basketball History Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose8">Baseball History Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose9">MLB Quiz</h1>
+	<br/><br/>
+</div><!--choosequiz-->
+
+<div id="quiz1">
+<div class="question" id="q11">
+	<h2>Who is the highest scoring point guard in the NBA right now?</h2>
+	<div id="options">
+	<input type="radio" name="bestpg" class="option" id="a11"/>Isiah Thomas
+			<br/>
+	<input type="radio" name="bestpg" class="option" id="b11"/>Stephen Curry
+			<br/>
+	<input type="radio" name="bestpg" class="option" id="c11"/>Russell Westbrook
+			<br/>
+	<input type="radio" name="bestpg" class="option" id="d11"/>
+	Chris Paul
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q21">
+	<h2>Who is the highest scoring shooting guard in the NBA right now?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="bestsg" class="option" id="a21"/>Kobe Bryant
+			<br/>
+	<input type="radio" name="bestsg" class="option" id="b21"/>Dwyane Wade
+			<br/>
+	<input type="radio" name="bestsg" class="option" id="c21"/>Klay Thompson
+			<br/>
+	<input type="radio" name="bestsg" class="option" id="d21"/>James Harden
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q31">
+	<h2>Who is the highest scoring small forward in the NBA right now?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="bestsf" class="option" id="a31"/>Kevin Durant
+			<br/>
+	<input type="radio" name="bestsf" class="option" id="b31"/>Lebron James
+			<br/>
+	<input type="radio" name="bestsf" class="option" id="c31"/>Kawhi Leonard
+			<br/>
+	<input type="radio" name="bestsf" class="option" id="d31"/>Paul George
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q41">
+	<h2>Who is the highest scoring power forward in the NBA right now?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="bestpf" class="option" id="a41"/>
+	Draymond Green
+			<br/>
+	<input type="radio" name="bestpf" class="option" id="b41"/>
+	LaMarcus Aldridge
+			<br/>
+	<input type="radio" name="bestpf" class="option" id="c41"/>
+	Anthony Davis
+			<br/>
+	<input type="radio" name="bestpf" class="option" id="d41"/>
+	Tim Duncan
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q51">
+	<h2>Who is the highest scoring center in the NBA right now?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="bestc" class="option" id="a51"/>
+	DeMarcus Cousins
+			<br/>
+	<input type="radio" name="bestc" class="option" id="b51"/>
+	DeAndre Jordan
+			<br/>
+	<input type="radio" name="bestc" class="option" id="c51"/>
+	Hassan Whiteside
+			<br/>
+	<input type="radio" name="bestc" class="option" id="d51"/>
+	Pau Gasol
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q61">
+	<h2>Who is the best coach in the NBA right now?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="bestcoach" class="option" id="a61"/>
+	Terry Slotts
+			<br/>
+	<input type="radio" name="bestcoach" class="option" id="b61"/>
+	Greg Popovich
+			<br/>
+	<input type="radio" name="bestcoach" class="option" id="c61"/>
+	Brad Stevens
+			<br/>
+	<input type="radio" name="bestcoach" class="option" id="d61"/>
+	Rick Carlisle
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q71">
+	<h2>Who won the Sixth Man of the Year Award in 2016</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="nextchamp" class="option" id="a71"/>
+	Evan Turner
+			<br/>
+	<input type="radio" name="nextchamp" class="option" id="b71"/>
+	Will Barton
+			<br/>
+	<input type="radio" name="nextchamp" class="option" id="c71"/>
+	LeBron James
+			<br/>
+	<input type="radio" name="nextchamp" class="option" id="d71"/>
+	Jamal Crawford
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q81">
+	<h2>Who has scored the most points in NBA history?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="secondbest" class="option" id="a81"/>
+	Magic Johnson
+			<br/>
+	<input type="radio" name="secondbest" class="option" id="b81"/>
+	Wilt Chamberlain
+			<br/>
+	<input type="radio" name="secondbest" class="option" id="c81"/>
+	Kareem Abdul-Jabbar
+			<br/>
+	<input type="radio" name="secondbest" class="option" id="d81"/>
+	Lebron James
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q91">
+	<h2>Which of these current NBA trios would win if they<br/> all played in a 3-on-3 tournament?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="nba3on3" class="option" id="a91"/>
+	John Wall, Lebron James and Draymond Green
+			<br/>
+	<input type="radio" name="nba3on3" class="option" id="b91"/>
+	Chris Paul, Kevin Durant and DeMarcus Cousins 
+			<br/>
+	<input type="radio" name="nba3on3" class="option" id="c91"/>
+	Russell Westbrook, James Harden and Anthony Davis
+			<br/>
+	<input type="radio" name="nba3on3" class="option" id="d91"/>
+	Steph Curry, Paul George and LaMarcus Aldridge
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q101">
+	<h2>Which of these teams of NBA legends would win if they<br/> all played in a 3-on-3 tournament?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="legend3on3" class="option" id="a101"/>
+	John Stockton, Larry Bird and Wilt Chamberlain
+			<br/>
+	<input type="radio" name="legend3on3" class="option" id="b101"/>
+	Michael Jordan, Elgin Baylor and Hakeem Olajuwon
+			<br/>
+	<input type="radio" name="legend3on3" class="option" id="c101"/>
+	Magic Johnson, Oscar Robertson and Bill Russell
+			<br/>
+	<input type="radio" name="legend3on3" class="option" id="d101"/>
+	Kobe Bryant, Scottie Pippen and Kareem Abdul-Jabbar 
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+
+<div class="submit" onclick = checkquizoneanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz1-->
+
+<div id="quiz2">
+<div class="question" id="q12">
+	<h2>Who will win the AFC in the 2016-17 NFL season?</h2>
+	<div id="options">
+	<input type="radio" name="AFC" class="option" id="a12"/>Houston Texans
+			<br/>
+	<input type="radio" name="AFC" class="option" id="b12"/>Pittsburgh Steelers
+			<br/>
+	<input type="radio" name="AFC" class="option" id="c12"/>New England Patriots
+			<br/>
+	<input type="radio" name="AFC" class="option" id="d12"/>
+	Denver Broncos
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q22">
+	<h2>Who will win the NFC in the 2016-17 NFL season?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="NFC" class="option" id="a22"/>Green Bay Packers
+			<br/>
+	<input type="radio" name="NFC" class="option" id="b22"/>
+	Seattle Seahawks
+			<br/>
+	<input type="radio" name="NFC" class="option" id="c22"/>
+	Arizona Cardinals
+			<br/>
+	<input type="radio" name="NFC" class="option" id="d22"/>
+	Carolina Panthers
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q32">
+	<h2>Who is the NFL's Best Player</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="nflplayer" class="option" id="a32"/>Tom Brady
+			<br/>
+	<input type="radio" name="nflplayer" class="option" id="b32"/>
+	Aaron Rodgers
+			<br/>
+	<input type="radio" name="nflplayer" class="option" id="c32"/>JJ Watt
+			<br/>
+	<input type="radio" name="nflplayer" class="option" id="d32"/>
+	Cam Newton
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q42">
+	<h2>Who is the NFL's best head coach?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="nflcoach" class="option" id="a42"/>
+	Bruce Arians
+			<br/>
+	<input type="radio" name="nflcoach" class="option" id="b42"/>
+	Mike McCarthy
+			<br/>
+	<input type="radio" name="nflcoach" class="option" id="c42"/>
+	Jack Del Rio
+			<br/>
+	<input type="radio" name="nflcoach" class="option" id="d42"/>
+	Bill Belichick
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q52">
+	<h2>Who is the league's best looking player?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="looking" class="option" id="a52"/>
+	Tom Brady
+			<br/>
+	<input type="radio" name="looking" class="option" id="b52"/>
+	Jimmy Garopolo
+			<br/>
+	<input type="radio" name="looking" class="option" id="c52"/>
+	Cam Newton
+			<br/>
+	<input type="radio" name="looking" class="option" id="d52"/>
+	I can't decide between Brady and Jimmmy!
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q62">
+	<h2>Who is the best quarterback of all-time?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="bestqb" class="option" id="a62"/>
+	John Elway
+			<br/>
+	<input type="radio" name="bestqb" class="option" id="b62"/>
+	Tom Brady
+			<br/>
+	<input type="radio" name="bestqb" class="option" id="c62"/>
+	Peyton Manning
+			<br/>
+	<input type="radio" name="bestqb" class="option" id="d62"/>
+	Joe Montana
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q72">
+	<h2>What is the best tailgate food?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="tailgate" class="option" id="a72"/>
+	Hot Dogs
+			<br/>
+	<input type="radio" name="tailgate" class="option" id="b72"/>
+	Hamburgers
+			<br/>
+	<input type="radio" name="tailgate" class="option" id="c72"/>
+	Buffalo Chicken Dip
+			<br/>
+	<input type="radio" name="tailgate" class="option" id="d72"/>
+	Steak Tips
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q82">
+	<h2>What is the best tailgate beer?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="beer" class="option" id="a82"/>
+	Bud Light
+			<br/>
+	<input type="radio" name="beer" class="option" id="b82"/>
+	Sam Adams
+			<br/>
+	<input type="radio" name="beer" class="option" id="c82"/>
+	Some Bullshit IPA
+			<br/>
+	<input type="radio" name="beer" class="option" id="d82"/>
+	Budweiser
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q92">
+	<h2>How long should a tailgate last?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="howlong" class="option" id="a92"/>
+	An hour
+			<br/>
+	<input type="radio" name="howlong" class="option" id="b92"/>
+	2 Hours
+			<br/>
+	<input type="radio" name="howlong" class="option" id="c92"/>
+	4 Hours
+			<br/>
+	<input type="radio" name="howlong" class="option" id="d92"/>
+	24 Hours
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q102">
+	<h2>Who is the worst person on earth?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="roger" class="option" id="a102"/>
+	Donald Trump
+			<br/>
+	<input type="radio" name="roger" class="option" id="b102"/>
+	Kim Kardashian
+			<br/>
+	<input type="radio" name="roger" class="option" id="c102"/>
+	Roger Goodell
+			<br/>
+	<input type="radio" name="roger" class="option" id="d102"/>
+	Kanye West 
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+
+<div class="submit" onclick = checkquiztwoanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz2-->
+
+<div id="quiz3">
+<div class="question" id="q13">
+	<h2>Which of these foods is the best?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="bestfood" class="option" id="a13"/>French Bread
+			<br/>
+	<input type="radio" name="bestfood" class="option" id="b13"/>Canteloupe
+			<br/>
+	<input type="radio" name="bestfood" class="option" id="c13"/>Guacamole
+			<br/>
+	<input type="radio" name="bestfood" class="option" id="d13"/>Steak
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q23">
+	<h2>Which of these foods is the worst?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="worstfood" class="option" id="a23"/>Peanuts
+			<br/>
+	<input type="radio" name="worstfood" class="option" id="b23"/>Tacos
+			<br/>
+	<input type="radio" name="worstfood" class="option" id="c23"/>Bananas
+			<br/>
+	<input type="radio" name="worstfood" class="option" id="d23"/>Frosted Flakes
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q33">
+	<h2>Where is pad thai originally from?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="thai" class="option" id="a33"/>China
+			<br/>
+	<input type="radio" name="thai" class="option" id="b33"/>Austalia
+			<br/>
+	<input type="radio" name="thai" class="option" id="c33"/>Japan
+			<br/>
+	<input type="radio" name="thai" class="option" id="d33"/>Thailand
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q43">
+	<h2>Which continent did cocoa beans originate from?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="cocoa" class="option" id="a43"/>Africa
+			<br/>
+	<input type="radio" name="cocoa" class="option" id="b43"/>South America
+			<br/>
+	<input type="radio" name="cocoa" class="option" id="c43"/>Europe
+			<br/>
+	<input type="radio" name="cocoa" class="option" id="d43"/>Australia
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q53">
+	<h2>Beets?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="beets" class="option" id="a53"/>Yes please!
+			<br/>
+	<input type="radio" name="beets" class="option" id="b53"/>Love 'em.
+			<br/>
+	<input type="radio" name="beets" class="option" id="c53"/>Oh god no.
+			<br/>
+	<input type="radio" name="beets" class="option" id="d53"/>Maybe later.
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q63">
+	<h2>What is the best ice cream flavor?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="icecream" class="option" id="a63"/>Cookies and Cream
+			<br/>
+	<input type="radio" name="icecream" class="option" id="b63"/>Cookie Dough
+			<br/>
+	<input type="radio" name="icecream" class="option" id="c63"/>Cotton Candy
+			<br/>
+	<input type="radio" name="icecream" class="option" id="d63"/>Pistachio
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q73">
+	<h2>What is the best barbeque food?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="bbq" class="option" id="a73"/>Baby Back Ribs
+			<br/>
+	<input type="radio" name="bbq" class="option" id="b73"/>BBQ Shrimp
+			<br/>
+	<input type="radio" name="bbq" class="option" id="c73"/>BBQ Chicken Wings
+			<br/>
+	<input type="radio" name="bbq" class="option" id="d73"/>Pulled Pork
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q83">
+	<h2>What's the best fruit juice flavor?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="juice" class="option" id="a83"/>Cranberry
+			<br/>
+	<input type="radio" name="juice" class="option" id="b83"/>Apple
+			<br/>
+	<input type="radio" name="juice" class="option" id="c83"/>Grape
+			<br/>
+	<input type="radio" name="juice" class="option" id="d83"/>Orange
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q93">
+	<h2>Do you want fries with that?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="fries" class="option" id="a93"/>Will anyone else have some?
+			<br/>
+	<input type="radio" name="fries" class="option" id="b93"/>No thanks, I'm on a diet.
+			<br/>
+	<input type="radio" name="fries" class="option" id="c93"/>Can I get a side salad instead?
+			<br/>
+	<input type="radio" name="fries" class="option" id="d93"/>Uh, yeah.
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q103">
+	<h2>Dessert or just the check?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="dessert" class="option" id="a103"/>Just the check.
+			<br/>
+	<input type="radio" name="dessert" class="option" id="b103"/>We'll take a look at the menu.
+			<br/>
+	<input type="radio" name="dessert" class="option" id="c103"/>Yeah, I'll have the souffle.
+			<br/>
+	<input type="radio" name="dessert" class="option" id="d103"/>Do you have anything that's gluten free?
+	</div><!--options-->
+	</div><!--questions-->
+	<br/>
+	<br/>
+
+<div class="submit" onclick = checkquizthreeanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz3-->
+
+<div id="quiz4">
+<div class="question" id="q14">
+	<h2>What is the best vegetable to put on a burger</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="burgerveg" class="option" id="a14"/>Grilled Onions
+			<br/>
+	<input type="radio" name="burgerveg" class="option" id="b14"/>Lettuce
+			<br/>
+	<input type="radio" name="burgerveg" class="option" id="c14"/>Pickles
+			<br/>
+	<input type="radio" name="burgerveg" class="option" id="d14"/>Bacon
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q24">
+	<h2>What's the best fruit to put on a burger?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="fruitburger" class="option" id="a24"/>Tomato
+			<br/>
+	<input type="radio" name="fruitburger" class="option" id="b24"/>Avocado
+			<br/>
+	<input type="radio" name="fruitburger" class="option" id="c24"/>Pickles
+			<br/>
+	<input type="radio" name="fruitburger" class="option" id="d24"/>Bacon
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q34">
+	<h2>Where are burgers from originally?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="burgerorig" class="option" id="a34"/>China
+			<br/>
+	<input type="radio" name="burgerorig" class="option" id="b34"/>McDonalds
+			<br/>
+	<input type="radio" name="burgerorig" class="option" id="c34"/>Germany
+			<br/>
+	<input type="radio" name="burgerorig" class="option" id="d34"/>United States of America
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q44">
+	<h2>What's the best cheese to put on a burger?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="cheese" class="option" id="a44"/>Bleu
+			<br/>
+	<input type="radio" name="cheese" class="option" id="b44"/>Cheddar
+			<br/>
+	<input type="radio" name="cheese" class="option" id="c44"/>Swiss
+			<br/>
+	<input type="radio" name="cheese" class="option" id="d44"/>Pepperjack 
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q54">
+	<h2>Sesame seeds on the bun?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="seeds" class="option" id="a54"/>Yes, must have.
+			<br/>
+	<input type="radio" name="seeds" class="option" id="b54"/>Sometimes, doesn't really matter.
+			<br/>
+	<input type="radio" name="seeds" class="option" id="c54"/>NO!!!!!!
+			<br/>
+	<input type="radio" name="seeds" class="option" id="d54"/>Yeah, sure.
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q64">
+	<h2>Ketchup, Mustard, Relish?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="cond" class="option" id="a64"/>Ketchup and Mustard
+			<br/>
+	<input type="radio" name="cond" class="option" id="b64"/>All 3
+			<br/>
+	<input type="radio" name="cond" class="option" id="c64"/>None
+			<br/>
+	<input type="radio" name="cond" class="option" id="d64"/>Ketchup
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q74">
+	<h2>Best sauce?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="sauce" class="option" id="a74"/>Garlic Aioli
+			<br/>
+	<input type="radio" name="sauce" class="option" id="b74"/>Guacamole
+			<br/>
+	<input type="radio" name="sauce" class="option" id="c74"/>BBQ Sauce
+			<br/>
+	<input type="radio" name="sauce" class="option" id="d74"/>Thousand Island
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q84">
+	<h2>Best drink with a burger?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="drink" class="option" id="a84"/>Lemonade
+			<br/>
+	<input type="radio" name="drink" class="option" id="b84"/>Beer
+			<br/>
+	<input type="radio" name="drink" class="option" id="c84"/>Water
+			<br/>
+	<input type="radio" name="drink" class="option" id="d84"/>Chocolate Milkshake
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q94">
+	<h2>Best fancy topping?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="fancy" class="option" id="a94"/>Black Forrest Bacon
+			<br/>
+	<input type="radio" name="fancy" class="option" id="b94"/>Truffle Cheese
+			<br/>
+	<input type="radio" name="fancy" class="option" id="c94"/>Truffle Aioli
+			<br/>
+	<input type="radio" name="fancy" class="option" id="d94"/>Lobster
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q104">
+	<h2>What's the most important ratio in a burger?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="dessert" class="option" id="a104"/>Meat to Bread
+			<br/>
+	<input type="radio" name="dessert" class="option" id="b104"/>Cheese to Meat
+			<br/>
+	<input type="radio" name="dessert" class="option" id="c104"/>Other to Buns
+			<br/>
+	<input type="radio" name="dessert" class="option" id="d104"/>Toppings to Meat
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+
+<div class="submit" onclick = checkquizfouranswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz4-->
+
+<div id="quiz5">
+<div class="question" id="q15">
+	<h2>Who scored the most goals in EPL competition during the 2014-15 season</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="mostgoals" class="option" id="a15"/>Diego Costa
+			<br/>
+	<input type="radio" name="mostgoals" class="option" id="b15"/>Harry Kane
+			<br/>
+	<input type="radio" name="mostgoals" class="option" id="c15"/>Christiano Ronaldo
+			<br/>
+	<input type="radio" name="mostgoals" class="option" id="d15"/>Sergio Aguero
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q25">
+	<h2>Which team won the English Premier League in 2015?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="winner" class="option" id="a25"/>Manchester City
+			<br/>
+	<input type="radio" name="winner" class="option" id="b25"/>Leicester City
+			<br/>
+	<input type="radio" name="winner" class="option" id="c25"/>Chelsea
+			<br/>
+	<input type="radio" name="winner" class="option" id="d25"/>Manchester United
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q35">
+	<h2>Which international team does Raheem Sterling play for?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="sterling" class="option" id="a35"/>Ghana
+			<br/>
+	<input type="radio" name="sterling" class="option" id="b35"/>England
+			<br/>
+	<input type="radio" name="sterling" class="option" id="c35"/>Germany
+			<br/>
+	<input type="radio" name="sterling" class="option" id="d35"/>USA
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q45">
+	<h2>Which of these teams were not relegated from the EPL after the 2015 season</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="rele" class="option" id="a45"/>Hull City
+			<br/>
+	<input type="radio" name="rele" class="option" id="b45"/>Burnley
+			<br/>
+	<input type="radio" name="rele" class="option" id="c45"/>QPR
+			<br/>
+	<input type="radio" name="rele" class="option" id="d45"/>Aston Villa
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q55">
+	<h2>Who won the EPL Player of the season in 2015?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="pos" class="option" id="a55"/>Sergio Aguero
+			<br/>
+	<input type="radio" name="pos" class="option" id="b55"/>Eden Hazard
+			<br/>
+	<input type="radio" name="pos" class="option" id="c55"/>Wayne Rooney
+			<br/>
+	<input type="radio" name="pos" class="option" id="d55"/>Daniel Sturridge
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q65">
+	<h2>Which club has won the most EPL titles?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="titles" class="option" id="a65"/>Chelsea
+			<br/>
+	<input type="radio" name="titles" class="option" id="b65"/>Liverpool
+			<br/>
+	<input type="radio" name="titles" class="option" id="c65"/>Arsenal
+			<br/>
+	<input type="radio" name="titles" class="option" id="d65"/>Manchester United
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q75">
+	<h2>Who was the most expensive transfer of all time in the EPL?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="money" class="option" id="a75"/>Gareth Bale
+			<br/>
+	<input type="radio" name="money" class="option" id="b75"/>Zlatan Ibrahimovic
+			<br/>
+	<input type="radio" name="money" class="option" id="c75"/>Lionel Messi
+			<br/>
+	<input type="radio" name="money" class="option" id="d75"/>Wayne Rooney
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q85">
+	<h2>Which international team does Eden Hazard play for?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="eden" class="option" id="a85"/>Belgium
+			<br/>
+	<input type="radio" name="eden" class="option" id="b85"/>England
+			<br/>
+	<input type="radio" name="eden" class="option" id="c85"/>Germany
+			<br/>
+	<input type="radio" name="eden" class="option" id="d85"/>France
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q95">
+	<h2>Who is Manuel Pelligrini?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="pelli" class="option" id="a95"/>The Manager of Chelsea
+			<br/>
+	<input type="radio" name="pelli" class="option" id="b95"/>The Manager of Machester City
+			<br/>
+	<input type="radio" name="pelli" class="option" id="c95"/>The Top Scorer on West Ham United
+			<br/>
+	<input type="radio" name="pelli" class="option" id="d95"/>The Centerback for Manchester United
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquizfiveanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz5-->
+
+<div id="quiz6">
+<div class="question" id="q16">
+	<h2>Who scored the most goals in La Liga competition during the 2014-15 season?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="ligagoals" class="option" id="a16"/>Lionel Messi
+			<br/>
+	<input type="radio" name="ligagoals" class="option" id="b16"/>Antoine Greizzman 
+			<br/>
+	<input type="radio" name="ligagoals" class="option" id="c16"/>Christiano Ronaldo
+			<br/>
+	<input type="radio" name="ligagoals" class="option" id="d16"/>Sergio Aguero
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q26">
+	<h2>Which team won the English Premier League in 2015?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="ligawinner" class="option" id="a26"/>Athletic Bilbao
+			<br/>
+	<input type="radio" name="ligawinner" class="option" id="b26"/>FC Barcelona
+			<br/>
+	<input type="radio" name="ligawinner" class="option" id="c26"/>Real Madrid
+			<br/>
+	<input type="radio" name="ligawinner" class="option" id="d26"/>Athletico Madrid
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q36">
+	<h2>Which international team does Lionel Messi play for?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="sterling" class="option" id="a36"/>Argentina
+			<br/>
+	<input type="radio" name="sterling" class="option" id="b36"/>England
+			<br/>
+	<input type="radio" name="sterling" class="option" id="c36"/>Brazil
+			<br/>
+	<input type="radio" name="sterling" class="option" id="d36"/>Spain
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q46">
+	<h2>Which of these teams were not relegated from the La Liga after the 2015 season</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="a46"/>Deportivo
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="b46"/>Cordoba
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="c46"/>Almeria
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="d46"/>Eibar
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q56">
+	<h2>Who had the most assists in La Liga in 2015?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="assists" class="option" id="a56"/>Christiano Ronaldo
+			<br/>
+	<input type="radio" name="assists" class="option" id="b56"/>Luis Suarez
+			<br/>
+	<input type="radio" name="assists" class="option" id="c56"/>Neymar
+			<br/>
+	<input type="radio" name="assists" class="option" id="d56"/>Lionel Messi
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q66">
+	<h2>Which club has won the most La Liga titles?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="titlesliga" class="option" id="a66"/>Athletic Bilbao
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="b66"/>Athletico Madrid
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="c66"/>Barcelona
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="d66"/>Real Madrid
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquizsixanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz6-->
+
+<div id="quiz7">
+<div class="question" id="q17">
+	<h2>Which of these is a fruit?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="fruityes" class="option" id="a17"/>Tomatoes
+			<br/>
+	<input type="radio" name="fruityes" class="option" id="b17"/>Bell Peppers
+			<br/>
+	<input type="radio" name="fruityes" class="option" id="c17"/>Celery
+			<br/>
+	<input type="radio" name="fruityes" class="option" id="d17"/>Carrots
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q27">
+	<h2>Which of these fruits is known to be growth in Massachusetts</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="massfruit" class="option" id="a27"/>Bananas
+			<br/>
+	<input type="radio" name="massfruit" class="option" id="b27"/>Cranberries
+			<br/>
+	<input type="radio" name="massfruit" class="option" id="c27"/>Strawberries
+			<br/>
+	<input type="radio" name="massfruit" class="option" id="d27"/>Avocadoes
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q37">
+	<h2>Where are most bananas grown</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="sterling" class="option" id="a37"/>Argentina
+			<br/>
+	<input type="radio" name="sterling" class="option" id="b37"/>England
+			<br/>
+	<input type="radio" name="sterling" class="option" id="c37"/>Brazil
+			<br/>
+	<input type="radio" name="sterling" class="option" id="d37"/>Spain
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q47">
+	<h2>Which of these teams were not relegated from the La Liga after the 2015 season?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="a47"/>Deportivo
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="b47"/>Cordoba
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="c47"/>Almeria
+			<br/>
+	<input type="radio" name="ligarele" class="option" id="d47"/>Eibar
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q57">
+	<h2>Who had the most assists in La Liga in 2015?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="assists" class="option" id="a57"/>Christiano Ronaldo
+			<br/>
+	<input type="radio" name="assists" class="option" id="b57"/>Luis Suarez
+			<br/>
+	<input type="radio" name="assists" class="option" id="c57"/>Neymar
+			<br/>
+	<input type="radio" name="assists" class="option" id="d57"/>Lionel Messi
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q67">
+	<h2>Which club has won the most La Liga titles?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="titlesliga" class="option" id="a67"/>Athletic Bilbao
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="b67"/>Athletico Madrid
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="c67"/>Barcelona
+			<br/>
+	<input type="radio" name="titlesliga" class="option" id="d67"/>Real Madrid
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquizsevenanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz7-->
+
+<div id="quiz8">
+<div class="question" id="q18">
+	<h2>Who is highest scoring NBA player of all time?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="highscore" class="option" id="a18"/>Michael Jordan
+			<br/>
+	<input type="radio" name="highscore" class="option" id="b18"/>Shaquille O'Neal
+			<br/>
+	<input type="radio" name="highscore" class="option" id="c18"/>Karl Malone
+			<br/>
+	<input type="radio" name="highscore" class="option" id="d18"/>Kareem Abdul-Jabbar
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q28">
+	<h2>Who is all-time NBA leader in assists?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="nbaassists" class="option" id="a28"/>Magic Johnson
+			<br/>
+	<input type="radio" name="nbaassists" class="option" id="b28"/>Pete Maravich
+			<br/>
+	<input type="radio" name="nbaassists" class="option" id="c28"/>John Stockton
+			<br/>
+	<input type="radio" name="nbaassists" class="option" id="d28"/>Chris Paul
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q38">
+	<h2>Who is all-time NBA leader in rebounding?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="rebound" class="option" id="a38"/>Bill Russell
+			<br/>
+	<input type="radio" name="rebound" class="option" id="b38"/>Wilt Chamberlain
+			<br/>
+	<input type="radio" name="rebound" class="option" id="c38"/>Tim Duncan
+			<br/>
+	<input type="radio" name="rebound" class="option" id="d38"/>Kevin Garnett
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q48">
+	<h2>Which NBA franchise has won the most championships?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="franchise" class="option" id="a48"/>Boston Celtics
+			<br/>
+	<input type="radio" name="franchise" class="option" id="b48"/>Los Angeles Lakers
+			<br/>
+	<input type="radio" name="franchise" class="option" id="c48"/>Houston Rockets
+			<br/>
+	<input type="radio" name="franchise" class="option" id="d48"/>New York Knicks
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q58">
+	<h2>Who is the all-time NBA leader in triple-doubles?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="tripdub" class="option" id="a58"/>Oscar Robertson
+			<br/>
+	<input type="radio" name="tripdub" class="option" id="b58"/>Jason Kidd
+			<br/>
+	<input type="radio" name="tripdub" class="option" id="c58"/>Russell Westbrook
+			<br/>
+	<input type="radio" name="tripdub" class="option" id="d58"/>Magic Johnson
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q68">
+	<h2>Which NBA legend had the nickname "the Mail Man?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="mailman" class="option" id="a68"/>Shaquille O'Neal
+			<br/>
+	<input type="radio" name="mailman" class="option" id="b68"/>Karl Malone
+			<br/>
+	<input type="radio" name="mailman" class="option" id="c68"/>David Robinson
+			<br/>
+	<input type="radio" name="mailman" class="option" id="d68"/>Hakeem Olajuwon
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q78">
+	<h2>Which player's silhouette is featured on the NBA's logo?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="logoplayer" class="option" id="a78"/>Rajon Rondo
+			<br/>
+	<input type="radio" name="logoplayer" class="option" id="b78"/>Jerry West
+			<br/>
+	<input type="radio" name="logoplayer" class="option" id="c78"/>Michael Jordan
+			<br/>
+	<input type="radio" name="logoplayer" class="option" id="d78"/>Kobe Bryant
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquizeightanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz8-->
+
+<div id="quiz9">
+<div class="question" id="q19">
+	<h2>Who, among players you didn't cheat with roids, hit the most home runs in MLB history?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="hr" class="option" id="a19"/>Alex Rodriguiz
+			<br/>
+	<input type="radio" name="hr" class="option" id="b19"/>Babe Ruth
+			<br/>
+	<input type="radio" name="hr" class="option" id="c19"/>Hank Aaron
+			<br/>
+	<input type="radio" name="hr" class="option" id="d19"/>Willie Mays
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q29">
+	<h2>Who is the MLB's all time hits leader?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="" class="option" id="a29"/>Derek Jeter
+			<br/>
+	<input type="radio" name="" class="option" id="b29"/>Pete Rose
+			<br/>
+	<input type="radio" name="" class="option" id="c29"/>Lou Gehrig
+			<br/>
+	<input type="radio" name="" class="option" id="d29"/>Willie Mays
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q39">
+	<h2>Who is the Red Sox all-time leader in Home Runs?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="soxruns" class="option" id="a39"/>Tedd Williams
+			<br/>
+	<input type="radio" name="soxruns" class="option" id="b39"/>David Ortiz
+			<br/>
+	<input type="radio" name="soxruns" class="option" id="c39"/>Carl Yastrzemski
+			<br/>
+	<input type="radio" name="soxruns" class="option" id="d39"/>Jerry Rice
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q49">
+	<h2>Which MLB franchise has won the most World Series?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="series" class="option" id="a49"/>Boston Red Sox
+			<br/>
+	<input type="radio" name="series" class="option" id="b49"/>Chicago Cubs
+			<br/>
+	<input type="radio" name="series" class="option" id="c49"/>San Francisco Giants
+			<br/>
+	<input type="radio" name="series" class="option" id="d49"/>New York Yankees
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q59">
+	<h2>Which pitcher is the all-time MLB leader in strikeouts?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="so" class="option" id="a59"/>Pedro Martinez
+			<br/>
+	<input type="radio" name="so" class="option" id="b59"/>Walter Johnson
+			<br/>
+	<input type="radio" name="so" class="option" id="c59"/>Nolan Ryan
+			<br/>
+	<input type="radio" name="so" class="option" id="d59"/>Cy Young
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q69">
+	<h2>Which legendary MLB pitcher is the league's annual pitching award named for?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="young" class="option" id="a69"/>Cy Young
+			<br/>
+	<input type="radio" name="young" class="option" id="b69"/>Christy Matthewson
+			<br/>
+	<input type="radio" name="young" class="option" id="c69"/>Walter Johnson
+			<br/>
+	<input type="radio" name="young" class="option" id="d69"/>Grover Alexander
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquiznineanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz9-->
+
+<div id="quiz10">
+<div class="question" id="q110">
+	<h2>Which team won the World Series in 2015?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="hr" class="option" id="a110"/>Boston Red Sox
+			<br/>
+	<input type="radio" name="hr" class="option" id="b110"/>New York Mets
+			<br/>
+	<input type="radio" name="hr" class="option" id="c110"/>Kansas City Royals
+			<br/>
+	<input type="radio" name="hr" class="option" id="d110"/>Los Angeles Dodgers
+	</div><!--options-->
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q210">
+	<h2>Who led that MLB in home runs in 2015?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="hr15" class="option" id="a210"/>Nelson Cruz
+			<br/>
+	<input type="radio" name="hr15" class="option" id="b210"/>Chris Davis
+			<br/>
+	<input type="radio" name="hr15" class="option" id="c210"/>Albert Pujols
+			<br/>
+	<input type="radio" name="hr15" class="option" id="d210"/>
+	Bryce Harper
+	</div><!--options-->
+
+	</div><!--question-->
+	<br/>
+	<br/>
+<div class="question" id="q310">
+	<h2>Who was the Red Sox 2015 leader in Home Runs?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="sox15runs" class="option" id="a310"/>David Ortiz
+			<br/>
+	<input type="radio" name="sox15runs" class="option" id="b310"/>Hanley Ramirez
+			<br/>
+	<input type="radio" name="sox15runs" class="option" id="c310"/>Mookie Betts
+			<br/>
+	<input type="radio" name="sox15runs" class="option" id="d310"/>Dustin Pedroia
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q410">
+	<h2>Who was the MLB's hits leader in 2015?</h2>
+	<div id="options">
+			<br/>
+	<input type="radio" name="series" class="option" id="a410"/>Mike Trout
+			<br/>
+	<input type="radio" name="series" class="option" id="b410"/>Xander Bogaerts
+			<br/>
+	<input type="radio" name="series" class="option" id="c410"/>A.J. Pollock
+			<br/>
+	<input type="radio" name="series" class="option" id="d410"/>Dee Gordon
+	</div><!--options-->
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q510">
+	<h2>Which pitcher is the all-time MLB leader in strikeouts?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="so" class="option" id="a510"/>Corey Kluber
+			<br/>
+	<input type="radio" name="so" class="option" id="b510"/>Chris Archer
+			<br/>
+	<input type="radio" name="so" class="option" id="c510"/>Clayton Kershaw
+			<br/>
+	<input type="radio" name="so" class="option" id="d510"/>Max Scherzer
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="question" id="q610">
+	<h2>Who was the AL MVP in 2015?</h2>
+	<div id="options">
+		<br/>
+	<input type="radio" name="almvp" class="option" id="a610"/>Josh Donaldson
+			<br/>
+	<input type="radio" name="almvp" class="option" id="b610"/>Bryce Harper
+			<br/>
+	<input type="radio" name="almvp" class="option" id="c610"/>Mike Trout
+			<br/>
+	<input type="radio" name="almvp" class="option" id="d610"/>Lorenzo Cain
+	</div><!--options-->
+
+	</div><!--quiz-->
+	<br/>
+	<br/>
+<div class="submit" onclick = checkquiztenanswers()>
+	<h1>Submit Answers</h1>
+	</div>
+</div><!--quiz10-->
+
+<br/>
+<br/>
+
+
+</div><!--content-->
+
+</body>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Galleria Classic Theme</title>
+        <style>
+            #galleria{height:320px; width:620px;}
+
+        </style>
+
+        <!-- load jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+        <!-- load Galleria -->
+        <script src="../../galleria-1.4.2.min.js"></script>
+
+    </head>
+<body>
+        <div id="galleria">
+            <a href="pierce1.jpg"><img src="pierce1.jpg"></a>
+            <a href="russell1.jpg"><img src="russell1.jpg"></a>
+            <a href="brady2.jpg"><img src="brady2.jpg"></a>
+            <a href="messi1.jpg"><img src="messi1.jpg"></a>
+            <a href="lobster1.jpg"><img src="lobster1.jpg"></a>
+            <a href="sushi1.jpg"><img src="sushi1.jpg"></a>
+            <a href="innout1.jpg"><img src="innout1.jpg"></a>
+            <a href="chipotle1.jpg"><img src="chipotle1.jpg"></a>
+        </div>
+
+    <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('galleria.classic.min.js');
+
+    // Initialize Galleria
+    Galleria.run('#galleria');
+
+    </script>
+    </body>
+</html>

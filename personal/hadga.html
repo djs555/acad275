@@ -1,0 +1,42 @@
+var showresults = function(userinput){
+	console.log(userinput)
+	var newhtml = "";
+
+	for (i=0; i<4; i++) {
+		if(quizname[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1 ||
+			quizcat[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1 ||
+			quiztags[i].toLowerCase().indexOf(userinput.toLowerCase()) != -1){
+
+		newhtml = newhtml + "<h1 class='choose' id='chooseone'>" + quizname[i] + "Quiz</h1>";
+
+		document.getElementById('choosequiz').innerHTML = newhtml;
+				}
+        }
+ }
+
+
+ newhtml = newhtml + "<h1 class = 'choose' id = 'choose" + i + "'>" + quizname[i] + "Quiz</h1>";
+			document.getElementById('choosequiz').innerHTML = newhtml;
+
+
+<h1 class = "choose" id = "choose0">NBA Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose1">NFL Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose2">Food Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose3">Burger Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose4">EPL Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose5">La Liga Quiz</h1>
+	<br/>
+<h1 class = "choose" id = "choose6">Fruit Quiz</h1>
+
+
+
+		else if(picnumber = -1){
+			picnumber = 10;
+			$("#mainphoto").attr("src", source[picnumber]);
+			$("#caption").html(caption[picnumber]);
+				}
